@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multi-step Register Form</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="content">
+
+      
+      <div id="register">
+        <h3>Register</h3>
+        <div>
+          <label for="name-input">Name
+          <input type="text" id="name-input" placeholder="enter your name">
+          <p id="name-error">*Enter valid name*</p>
+        </label>
+        </div>
+
+        <div>
+          <label for="email-input">
+          Email
+          <input type="email" id="email-input" placeholder="example@gmail.com">
+          <p id="email-error">*Enter valid Email*</p>
+        </label>
+        </div>
+        
+
+        <button onclick="validation()">Continue</button>
+      </div>
+
+      <!--STEP 2-->
+      <div id="topics">
+        <h3>Which topics you are interested in?</h3>
+        <div class="buttons">
+          <input type="button" value="Software Development" id="btn1">
+          <input type="button" value="User Experience" id="btn2">
+          <input type="button" value="Graphic Design" id="btn3">
+        </div>
+        <button onclick="continue2()">Continue</button>
+      </div>
+
+      <!--STEP 3-->
+      <div id="summary">
+        <h3>Summary</h3>
+        <div class="info">
+          <p>Name: <span id="name-info"></span></p>
+          <p>Email: <span id="email-info"></span></p>
+        </div>
+        <div class="topics">
+          <p>Topics:</p>
+          <ul id="list-container">
+          </ul>
+        </div>
+
+        <button onclick="summary()">Confirm</button>
+      </div>
+
+    </div>
+
+      <div id="stepper">
+          <p>
+          Step <span id="step-input">1</span> of 3
+        </p>
+        <div id="step1">
+        </div>
+        <div id="step2">
+        </div>
+        <div id="step3">
+        </div>
+        
+      </div>
+      
+      
+
+    </div>
+    
+    
+  </body>
+  <script src="script.js"></script>
+</html>
